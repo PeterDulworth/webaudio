@@ -182,6 +182,10 @@ h2 {
 
 /* Phones only. */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  :root {
+    font-size: 1.8rem;
+  }
+
   .CardList {
     width: 100vw;
   }
@@ -191,7 +195,16 @@ h2 {
     max-width: unset;
   }
 
+  .Button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    line-height: 2rem;
+    font-size: 1.8rem;
+  }
+
   .Button__large {
-    width: 100%;
+    font-weight: bold;
+    line-height: 3rem;
+    font-size: 2rem;
+    width: 95%;
   }
 }
