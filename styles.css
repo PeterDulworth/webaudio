@@ -1,11 +1,143 @@
+:root {
+  --primary-color: #1778f2;
+  --secondary-color: rgb(239, 136, 176);
+
+  --bg-color: #f2f2f2;
+  --surface-color: white;
+  --bg-hover-color: #f2f2f2;
+  --surface-hover-color: hsl(0, 0%, 98%);
+
+  --primary-font-color: rgba(0, 0, 0, 0.87);
+  --secondary-font-color: rgba(0, 0, 0, 0.7);
+  --tertiary-font-color: rgba(0, 0, 0, 0.38);
+
+  --brand-fb-blue: #4267b2;
+
+  --on-background: rgba(255, 255, 255, 0.87);
+  --on-surface: rgba(255, 255, 255, 0.6);
+  --on-primary: #fff;
+  --on-secondary: #000;
+
+  /* spacing t-shirt sizes */
+  --spacing-none: 0;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-xxxl: 48px;
+  --spacing-xxxxl: 64px;
+
+  /* radii */
+  --radius-sm: 0.1rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-xxl: 2rem;
+  --radius-circle: 50%;
+
+  --danger: #f53d4e;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Karla', sans-serif;
+  background: var(--bg-color);
+  color: var(--primary-font-color);
 }
 
-.impulse {
-  border: 1px solid red;
-  height: 50px;
-  width: 200px;
+.App {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.AppContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.AppContent > *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.CardList {
+  display: inline-block;
+  /* background: var(--surface-color); */
+  padding: 1rem;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.CardList > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.Card {
+  width: 400px;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+  border-radius: var(--radius-md);
+  background: var(--surface-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.Card__selected {
+  border: 2px solid var(--primary-color);
+  text-overflow: ellipsis;
+}
+
+.Card__title {
+  font-weight: bold;
+}
+.Card__description {
+  /* background: red; */
+  /* z-index: 10; */
+}
+
+@media (max-width: 1100px) {
+  .App {
+    flex-direction: column;
+  }
+}
+
+.Button {
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xs) var(--spacing-md);
+  min-width: 3rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--on-primary);
+}
+
+.Button__danger {
+  background: var(--danger);
+  border: 2px solid var(--danger);
+}
+
+.Button__large {
+  min-width: 4rem;
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 1.5rem;
 }

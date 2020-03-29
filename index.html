@@ -8,39 +8,66 @@
     <meta name="description" content="Impulse" />
     <meta name="author" content="Nicolaus Dulworth" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!-- <input type="file" accept="audio/*" capture />
+    <div class="App">
+      <div class="AppContent">
+        <div class="CardList">
+          <h2>Select Impulse</h2>
+          <div id="impulse-0" class="Card">
+            <div class="Card__title">Impulse 1</div>
+            <div class="Card__description">Lorem ipsum dolor sit amet.</div>
+          </div>
+          <div id="impulse-1" class="Card">
+            <div class="Card__title">Impulse 2</div>
+            <div class="Card__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </div>
+          </div>
+          <div id="impulse-2" class="Card">
+            <div class="Card__title">Impulse 3</div>
+            <div class="Card__description">Lorem ipsum dolor sit.</div>
+          </div>
+        </div>
 
-    <div class="impulse">impulse 1</div>
-    <div class="impulse">impulse 2</div>
-    <div class="impulse">impulse 3</div> -->
+        <div class="CardList">
+          <h2>Select Source</h2>
+          <div id="source-0" class="Card">
+            <div class="Card__title">Record Your Own</div>
+            <div style="height: 8px"></div>
+            <button id="record" class="Button Button__danger">
+              <i class="fas fa-microphone"></i>&nbsp;Record
+            </button>
+            <button id="play-recording-btn" class="Button">
+              <i class="fas fa-play"></i>&nbsp;Play Recording
+            </button>
+          </div>
+          <div id="source-1" class="Card">
+            <div class="Card__title">Clip</div>
+            <div class="Card__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+          </div>
+          <div id="source-2" class="Card">
+            <div class="Card__title">Clarinet Solo</div>
+            <div class="Card__description">Lorem, ipsum dolor.</div>
+          </div>
+        </div>
 
-    <!-- <button id="load-impulse-0-btn">Load Impulse 0</button>
-    <button id="load-impulse-1-btn">Load Impulse 1</button>
-    <button id="load-impulse-2-btn">Load Impulse 2</button>
+        <button id="convolve-btn" class="Button Button__large">
+          <i class="fas fa-play"></i>&nbsp;Convolve
+        </button>
+      </div>
+    </div>
 
-    <button id="load-source-0-btn">Load Source 0</button>
-    <button id="load-source-1-btn">Load Source 1</button>
-    <button id="load-source-2-btn">Load Source 2</button> -->
-    <!-- <br />
-    <br />
-
-    <button id="start-btn">Play</button>
-    <button id="toggle-play-btn">Resume</button>
- -->
-
- <div class="app">
-
-  <div class="audio-controls">
-    <button id="record">Record</button>
-    <button id="play-recording">Play Recording</button>
-  </div>
-<div>
- 
-    <!-- <script src="vendor/reverb.js"></script> -->
-    <!-- <script src="convolve.js"></script> -->
-    <script src="record.js"></script>
+    <script src="vendor/reverb.js"></script>
+    <script src="convolve.js"></script>
+    <!-- <script src="record.js"></script> -->
   </body>
 </html>

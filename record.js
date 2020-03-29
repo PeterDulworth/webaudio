@@ -8,13 +8,14 @@
   // Ask for mic access.
   try {
     const constraints = { audio: true, video: false };
-    micStream = await window.navigator.mediaDevices.getUserMedia(constraints);
+    const micStream = await window.navigator.mediaDevices.getUserMedia(constraints);
     console.log('Got mic.');
+    initRecorder(micStream);
   } catch (err) {
     alert('Issue getting mic.', err);
   }
 
-  initRecorder(micStream);
+  // TODO: only enabled buttons if we can get access to mic
 
   /**
    * Append an AudioBuffer to another AudioBuffer
