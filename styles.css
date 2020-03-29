@@ -1,0 +1,11 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.impulse {
+  border: 1px solid red;
+  height: 50px;
+  width: 200px;
+}
