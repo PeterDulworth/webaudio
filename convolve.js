@@ -145,7 +145,7 @@
       startRecording();
     } else {
       console.log('Stop recording!');
-      document.getElementById('record').innerHTML = 'Start Recording';
+      document.getElementById('record').innerHTML = '<i class="fas fa-microphone"></i>&nbsp;Record';
       stopRecording();
     }
   }

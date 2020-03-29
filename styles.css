@@ -41,6 +41,28 @@
   --danger: #f53d4e;
 }
 
+/* dark color theme */
+[data-theme='dark'] {
+  --primary-color: hsl(213, 80%, 52%);
+  --secondary-color: rgb(239, 136, 176);
+
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --bg-hover-color: #121212;
+  --surface-hover-color: hsl(0, 0%, 14%);
+
+  --primary-font-color: rgba(255, 255, 255, 0.87);
+  --secondary-font-color: rgba(255, 255, 255, 0.55);
+  --tertiary-font-color: rgba(255, 255, 255, 0.4);
+
+  --brand-fb-blue: #2f477a;
+
+  --on-background: rgba(255, 255, 255, 0.87);
+  --on-surface: rgba(255, 255, 255, 0.6);
+  --on-primary: #1e1e1e;
+  --on-secondary: #000;
+}
+
 html,
 body {
   padding: 0;
@@ -78,6 +100,11 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .CardList > *:not(:last-child) {
@@ -85,7 +112,8 @@ body {
 }
 
 .Card {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
@@ -93,9 +121,6 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   border: 2px solid transparent;
-
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 .Card__selected {
@@ -107,14 +132,11 @@ body {
   font-weight: bold;
 }
 .Card__description {
-  /* background: red; */
-  /* z-index: 10; */
+  color: var(--secondary-font-color);
 }
 
-@media (max-width: 1100px) {
-  .App {
-    flex-direction: column;
-  }
+h2 {
+  width: 100%;
 }
 
 .Button {
@@ -140,4 +162,36 @@ body {
   font-weight: bold;
   line-height: 2rem;
   font-size: 1.5rem;
+}
+
+/* Small Screens. */
+@media (max-width: 1100px) {
+  .App {
+    padding-bottom: 2rem;
+  }
+
+  .AppContent {
+    flex-direction: column;
+  }
+
+  .AppContent > *:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Phones only. */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .CardList {
+    width: 100vw;
+  }
+
+  .Card {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .Button__large {
+    width: 100%;
+  }
 }
