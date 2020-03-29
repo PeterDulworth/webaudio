@@ -106,8 +106,8 @@ var reverbjs = {
 
     audioContext.createSourceFromUrl = function(audioUrl, callback) {
       console.log('Downloading sound from ' + audioUrl);
-      var sourceNode = audioContext.createBufferSource(),
-        request = new XMLHttpRequest();
+      var sourceNode = audioContext.createBufferSource();
+      var request = new XMLHttpRequest();
       request.open('GET', audioUrl, true);
       request.onreadystatechange = function() {
         if (request.readyState === 4 && request.status === 200) {
